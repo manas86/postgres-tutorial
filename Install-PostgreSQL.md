@@ -8,5 +8,4 @@ Above command will launch the `psql tool` on the command line. Then run `\?` for
 
  ![](https://github.com/manas86/postgres-tutorial/blob/master/help-command.png)
 
-In another window you can type to check above container is running
-> docker ps 
+In another window you can type `docker ps` to check and verify if above container is running
