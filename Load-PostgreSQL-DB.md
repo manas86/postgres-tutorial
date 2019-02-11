@@ -12,6 +12,21 @@
 
 - Now download and unzip the file [dvdrental.zip](https://github.com/manas86/postgres-tutorial/blob/master/dvdrental.zip) file on your local machine. 
 
+- In another window, copy restore.sql file to container `demo/docker-entrypoint-initdb.d/restore.sql` (make sure demo container is still running) 
+> docker cp ./restore.sql demo:/docker-entrypoint-initdb.d/restore.sql
+
+- Now other window try executing: (make sure demo container is still running) 
+> docker exec -it -u postgres demo psql dvdrental postgres -f /docker-entrypoint-initdb.d/restore.sql
+
+- Now verify if restore.sql executed properly by 
+
+```
+docker exec -it demo psql -U postgres
+\c dvdrental
+\dt
+```
+![](https://github.com/manas86/postgres-tutorial/blob/master/verify-restore-sql.png)
+
 ### DVD Rental DB:
 
 The DVD rental database has many objects including:
@@ -46,3 +61,5 @@ DVD Rental ER Model:
 | city | stores the city names | 2173.dat |
 | country | stores the country names | 2175.dat |
 | language | stores the languages of film | 2181.dat |
+
+
