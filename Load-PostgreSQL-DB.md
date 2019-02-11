@@ -10,7 +10,7 @@
 
 - Now in another window, run `docker exec -it demo bash` command to get inside the `demo`container. 
 
-- Now download and unzip the file `dvdrental.zip` file on your local machine. 
+- Now download and unzip the file [dvdrental.zip](https://github.com/manas86/postgres-tutorial/blob/master/dvdrental.zip) file on your local machine. 
 
 ### DVD Rental DB:
 
@@ -27,7 +27,7 @@ DVD Rental ER Model:
 
 ![](https://github.com/manas86/postgres-tutorial/blob/master/dvd-rental-sample-database-diagram.png)
 
-15 tables in the DVD Rental databases are and their corresponding dat file:
+15 tables in the DVD Rental databases and their corresponding dat file:
  
 | Table Name | Description | Input file name |
 | --- | --- | --- |
