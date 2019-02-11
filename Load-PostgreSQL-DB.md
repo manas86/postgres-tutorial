@@ -1,12 +1,10 @@
 ### step-by-step Creating a new DVD rental database
 
-- run below command in `psql` command line for your `demo` container. 
-`CREATE DATABASE dvdrental;`
-
+- run  command `CREATE DATABASE dvdrental;` in `psql` command line for your `demo` container. (`docker exec -it demo psql -U postgres`)
 - verify the database by issuing `\l` 
 ![](https://github.com/manas86/postgres-tutorial/blob/master/list-dbs.png)
 
-- Now checkin-to DB dvdrental by issuing `\c dvdrental` in your `sql` command line of `demo` container.
+- Now checkin-to DB dvdrental by issuing `\c dvdrental` in your `sql` command line of `demo` container. (`docker exec -it demo psql -U postgres`)
 
 - Now in another window, run `docker exec -it demo bash` command to get inside the `demo`container. 
 
@@ -39,11 +37,11 @@ docker exec -it demo psql -U postgres
 ```
 (some demo files null is \N, so replace ; to \N)
 
-- check below table for relationship
+- check below table for dat file relationship.
 
-- now your container `demo` is ready for any testing with data. `docker exec -it demo psql -U postgres`
+- now your container `demo` is ready for any testing including data. 
 
-- Happy Testing!!!
+- Happy Testing!!! `docker exec -it demo psql -U postgres`
 
 ### DVD Rental DB:
 
