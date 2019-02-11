@@ -1,6 +1,6 @@
-I learned postgres using docker by this way. I mean hard way!!! funny though some people might be thinking  the same So, I thought to write it. 
-But let me tell you during that course of learning, I also learned that there are other ways. like create dockr files 
-and copy these files instead one by one. 
+I learned postgres using docker by this way. I mean hard way!!! funny though some people might be thinking  the same.
+So, I thought to write about it. But let me tell you during that course of learning, I also learned that there are other ways too. 
+like create docker files and copy these files in one go instead one by one. 
 
 Perhaps using coping files one by one, gave me  learning capability of how to use `copy` command. 
 
