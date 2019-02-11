@@ -27,6 +27,24 @@ docker exec -it demo psql -U postgres
 ```
 ![](https://github.com/manas86/postgres-tutorial/blob/master/verify-restore-sql.png)
 
+- Now copy all the *.dat file one by one to the `demo container` as below (make sure demo container is still running)
+`docker cp ./2187.dat demo:/docker-entrypoint-initdb.d/2189.dat`
+
+- Now other window (make sure demo container is still running)
+
+```
+docker exec -it demo psql -U postgres
+\c dvdrental
+\copy payment from '/docker-entrypoint-initdb.d/2187.dat' with delimiter E'\t' null as ';'
+```
+(some demo files null is \N, so replace ; to \N)
+
+- check below table for relationship
+
+- now your container `demo` is ready for any testing with data. `docker exec -it demo psql -U postgres`
+
+- Happy Testing!!!
+
 ### DVD Rental DB:
 
 The DVD rental database has many objects including:
